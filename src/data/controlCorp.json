@@ -1,0 +1,2829 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Sintad Api Documentation Control Corporativo",
+        "description": "Sintad Api Documentation",
+        "contact": {
+            "name": "Sintad",
+            "url": "https://www.sintad.pe",
+            "email": "contacto@sintad.pe"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        },
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://api-cluster-sistemas-internos.sumax.pe/dev/sumax-erp-backend-control-corporativo",
+            "description": "Generated server url"
+        }
+    ],
+    "security": [
+        {
+            "JWT": []
+        }
+    ],
+    "paths": {
+        "/api/sccusuarios": {
+            "put": {
+                "tags": [
+                    "scc-usuario-controller"
+                ],
+                "operationId": "update",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccUsuarioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-usuario-controller"
+                ],
+                "operationId": "insert",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccUsuarioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-usuario-controller"
+                ],
+                "operationId": "delete",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccUsuarioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarioperfiles": {
+            "put": {
+                "tags": [
+                    "scc-usuario-perfil-controller"
+                ],
+                "operationId": "update_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccUsuarioPerfilDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-usuario-perfil-controller"
+                ],
+                "operationId": "insert_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccUsuarioPerfilDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-usuario-perfil-controller"
+                ],
+                "operationId": "delete_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccUsuarioPerfilDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccsistemas": {
+            "put": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "update_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "insert_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "delete_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccpersonas": {
+            "put": {
+                "tags": [
+                    "scc-persona-controller"
+                ],
+                "operationId": "update_3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccPersonaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-persona-controller"
+                ],
+                "operationId": "insert_3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccPersonaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-persona-controller"
+                ],
+                "operationId": "delete_3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccPersonaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccperfiles": {
+            "put": {
+                "tags": [
+                    "scc-perfil-controller"
+                ],
+                "operationId": "update_4",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccPerfilDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-perfil-controller"
+                ],
+                "operationId": "insert_4",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccPerfilDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-perfil-controller"
+                ],
+                "operationId": "delete_4",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccPerfilDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccmenus": {
+            "put": {
+                "tags": [
+                    "scc-menu-controller"
+                ],
+                "operationId": "update_5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccMenuDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-menu-controller"
+                ],
+                "operationId": "insert_5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccMenuDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-menu-controller"
+                ],
+                "operationId": "delete_5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccMenuDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularios": {
+            "put": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "update_6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccFormularioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "insert_6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccFormularioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "delete_6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccFormularioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularioacciones": {
+            "put": {
+                "tags": [
+                    "scc-formulario-accion-controller"
+                ],
+                "operationId": "update_7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccFormularioAccionDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-formulario-accion-controller"
+                ],
+                "operationId": "insert_7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccFormularioAccionDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-formulario-accion-controller"
+                ],
+                "operationId": "delete_7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccFormularioAccionDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccacciones": {
+            "put": {
+                "tags": [
+                    "scc-accion-controller"
+                ],
+                "operationId": "update_8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccAccionDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-accion-controller"
+                ],
+                "operationId": "insert_8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccAccionDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-accion-controller"
+                ],
+                "operationId": "delete_8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccAccionDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccaccesos": {
+            "put": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "update_9",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccAccesoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "insert_9",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccAccesoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "delete_9",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SccAccesoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarios/updateWithPefilList": {
+            "post": {
+                "tags": [
+                    "scc-usuario-controller"
+                ],
+                "operationId": "updateWithPefilList",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/InsertionUsuarioPerfilCustomDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarios/insertWithPefilList": {
+            "post": {
+                "tags": [
+                    "scc-usuario-controller"
+                ],
+                "operationId": "insertWithPefilList",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/InsertionUsuarioPerfilCustomDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarioperfiles/insertAndDeleteAllCustom": {
+            "post": {
+                "tags": [
+                    "scc-usuario-perfil-controller"
+                ],
+                "operationId": "insertAndDeleteAll",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/SccUsuarioPerfilDto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccmenus/findAllByCodigoSistemaAndIdFormularioList/{codigoSistema}": {
+            "post": {
+                "tags": [
+                    "scc-menu-controller"
+                ],
+                "operationId": "findAllByCodigoSistemaAndIdFormularioList",
+                "parameters": [
+                    {
+                        "name": "codigoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularios/findAllByIdSistemaList": {
+            "post": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "findAllByIdSistemaList",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularios/findAllByIdSistemaListCustom": {
+            "post": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "findAllByIdSistemaListCustom",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularioacciones/insertAndDeleteAllCustom": {
+            "post": {
+                "tags": [
+                    "scc-formulario-accion-controller"
+                ],
+                "operationId": "insertAndDeleteAllCustom",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/SccFormularioAccionDto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularioacciones/findAllByIdFormularioList": {
+            "post": {
+                "tags": [
+                    "scc-formulario-accion-controller"
+                ],
+                "operationId": "findAllByIdFormularioList",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccaccesos/insertAndDeleteAllCustom": {
+            "post": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "insertAndDeleteAll_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/SccAccesoDto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccaccesos/findAllByCodigoSistemaCustom": {
+            "post": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "findAllByCodigoSistemaCustom",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AccessDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/params/version": {
+            "get": {
+                "tags": [
+                    "params-controller"
+                ],
+                "operationId": "version",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/params/environment": {
+            "get": {
+                "tags": [
+                    "params-controller"
+                ],
+                "operationId": "environment",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/healthcheck/status": {
+            "get": {
+                "tags": [
+                    "health-check-controller"
+                ],
+                "operationId": "version_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarios/{id}": {
+            "get": {
+                "tags": [
+                    "scc-usuario-controller"
+                ],
+                "operationId": "findById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarios/findByUsuario/{usuario}": {
+            "get": {
+                "tags": [
+                    "scc-usuario-controller"
+                ],
+                "operationId": "findByUsuario",
+                "parameters": [
+                    {
+                        "name": "usuario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarios/findAll": {
+            "get": {
+                "tags": [
+                    "scc-usuario-controller"
+                ],
+                "operationId": "findAll",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarioperfiles/{sccUsuario}/{sccPerfil}": {
+            "get": {
+                "tags": [
+                    "scc-usuario-perfil-controller"
+                ],
+                "operationId": "findById_1",
+                "parameters": [
+                    {
+                        "name": "sccUsuario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sccPerfil",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarioperfiles/findAllByIdUsuarioCustom/{idUsuario}": {
+            "get": {
+                "tags": [
+                    "scc-usuario-perfil-controller"
+                ],
+                "operationId": "findAllByIdUsuarioCustom",
+                "parameters": [
+                    {
+                        "name": "idUsuario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccusuarioperfiles/findAllByIdUsuario/{idUsuario}": {
+            "get": {
+                "tags": [
+                    "scc-usuario-perfil-controller"
+                ],
+                "operationId": "findAllByIdUsuario",
+                "parameters": [
+                    {
+                        "name": "idUsuario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccsistemas/{id}": {
+            "get": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "findById_2",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccsistemas/findByUsuarioCustom/{usuario}": {
+            "get": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "findAllByUsuarioCustom",
+                "parameters": [
+                    {
+                        "name": "usuario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccsistemas/findAll": {
+            "get": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "findAll_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccsistemas/findAllCustomForAcceso": {
+            "get": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "findAllCustomForAcceso",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccsistemas/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "findAllByEstadoNgSelect",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccsistemas/findAllByEstado/{estado}": {
+            "get": {
+                "tags": [
+                    "scc-sistema-controller"
+                ],
+                "operationId": "findAllByEstado",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccpersonas/{id}": {
+            "get": {
+                "tags": [
+                    "scc-persona-controller"
+                ],
+                "operationId": "findById_3",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccpersonas/findByUsuario/{usuario}": {
+            "get": {
+                "tags": [
+                    "scc-persona-controller"
+                ],
+                "operationId": "findByUsuario_1",
+                "parameters": [
+                    {
+                        "name": "usuario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccpersonas/findByNroDocumento/{nroDocumento}": {
+            "get": {
+                "tags": [
+                    "scc-persona-controller"
+                ],
+                "operationId": "findByNroDocumento",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccpersonas/findByIdTipoDocumentoAndNroDocumento/{idTipoDocumento}/{nroDocumento}": {
+            "get": {
+                "tags": [
+                    "scc-persona-controller"
+                ],
+                "operationId": "findByIdTipoDocumentoAndNroDocumento",
+                "parameters": [
+                    {
+                        "name": "idTipoDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccperfiles/{id}": {
+            "get": {
+                "tags": [
+                    "scc-perfil-controller"
+                ],
+                "operationId": "findById_4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccperfiles/findAll": {
+            "get": {
+                "tags": [
+                    "scc-perfil-controller"
+                ],
+                "operationId": "findAll_2",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccperfiles/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "scc-perfil-controller"
+                ],
+                "operationId": "findAllByEstadoNgSelect_1",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccperfiles/findAllByEstado/{estado}": {
+            "get": {
+                "tags": [
+                    "scc-perfil-controller"
+                ],
+                "operationId": "findAllByEstado_1",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccmenus/{id}": {
+            "get": {
+                "tags": [
+                    "scc-menu-controller"
+                ],
+                "operationId": "findById_5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccmenus/findAllByCodigoSistemaAndIdMenuPadre/{codigoSistema}/{idMenuPadre}": {
+            "get": {
+                "tags": [
+                    "scc-menu-controller"
+                ],
+                "operationId": "findAllByCodigoSistemaAndIdMenuPadre",
+                "parameters": [
+                    {
+                        "name": "codigoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "idMenuPadre",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularios/{id}": {
+            "get": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "findById_6",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularios/findByCodigo/{codigo}": {
+            "get": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "findByCodigo",
+                "parameters": [
+                    {
+                        "name": "codigo",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularios/findAllByIdSistema/{idSistema}": {
+            "get": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "findAllByIdSistema",
+                "parameters": [
+                    {
+                        "name": "idSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularios/findAllByCodigoSistema/{codigoSistema}": {
+            "get": {
+                "tags": [
+                    "scc-formulario-controller"
+                ],
+                "operationId": "findAllByCodigoSistema",
+                "parameters": [
+                    {
+                        "name": "codigoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularioacciones/{sccFormulario}/{sccAccion}": {
+            "get": {
+                "tags": [
+                    "scc-formulario-accion-controller"
+                ],
+                "operationId": "findById_7",
+                "parameters": [
+                    {
+                        "name": "sccFormulario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sccAccion",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccformularioacciones/findAllByIdFormulario/{idFormulario}": {
+            "get": {
+                "tags": [
+                    "scc-formulario-accion-controller"
+                ],
+                "operationId": "findAllByIdTipoComprobante",
+                "parameters": [
+                    {
+                        "name": "idFormulario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccacciones/{id}": {
+            "get": {
+                "tags": [
+                    "scc-accion-controller"
+                ],
+                "operationId": "findById_8",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccacciones/findByCodigo/{codigo}": {
+            "get": {
+                "tags": [
+                    "scc-accion-controller"
+                ],
+                "operationId": "findByCodigo_1",
+                "parameters": [
+                    {
+                        "name": "codigo",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccacciones/findAll": {
+            "get": {
+                "tags": [
+                    "scc-accion-controller"
+                ],
+                "operationId": "findAll_3",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccacciones/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "scc-accion-controller"
+                ],
+                "operationId": "findAllByEstadoNgSelect_2",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccacciones/findAllByEstado/{estado}": {
+            "get": {
+                "tags": [
+                    "scc-accion-controller"
+                ],
+                "operationId": "findAllByEstado_2",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccaccesos/{sccPerfil}/{sccFormulario}/{sccAccion}": {
+            "get": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "findById_9",
+                "parameters": [
+                    {
+                        "name": "sccPerfil",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sccFormulario",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sccAccion",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccaccesos/findAllByIdPerfilForAcceso/{idPerfil}": {
+            "get": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "findAllByIdPerfilForAcceso",
+                "parameters": [
+                    {
+                        "name": "idPerfil",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccaccesos/findAllByIdPerfilCustom/{idPerfil}": {
+            "get": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "findAllByIdPerfilCustom",
+                "parameters": [
+                    {
+                        "name": "idPerfil",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sccaccesos/findAllByCodigoSistema/{codigoSistema}": {
+            "get": {
+                "tags": [
+                    "scc-acceso-controller"
+                ],
+                "operationId": "findAllByCodigoSistema_1",
+                "parameters": [
+                    {
+                        "name": "authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "codigoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "SccPersonaDto": {
+                "type": "object",
+                "properties": {
+                    "idPersona": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "idTipoDocumento": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "nroDocumento": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "apellido1": {
+                        "type": "string"
+                    },
+                    "apellido2": {
+                        "type": "string"
+                    },
+                    "direccion": {
+                        "type": "string"
+                    },
+                    "idUbicacionGeografica": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "idPaisNacionalidad": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "telefonoFijo": {
+                        "type": "string"
+                    },
+                    "telefonoMovil": {
+                        "type": "string"
+                    },
+                    "sexo": {
+                        "type": "string",
+                        "enum": [
+                            "M",
+                            "F"
+                        ]
+                    },
+                    "fchNacimiento": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SccUsuarioDto": {
+                "type": "object",
+                "properties": {
+                    "idUsuario": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "usuario": {
+                        "type": "string"
+                    },
+                    "clave": {
+                        "type": "string"
+                    },
+                    "sccPersona": {
+                        "$ref": "#/components/schemas/SccPersonaDto"
+                    },
+                    "correoElectronico": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "ApiResponse": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "type": "boolean"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "titulo": {
+                        "type": "string"
+                    },
+                    "mensaje": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "Informativo",
+                            "Advertencia",
+                            "Error"
+                        ]
+                    },
+                    "fecha": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "data": {}
+                }
+            },
+            "SccPerfilDto": {
+                "type": "object",
+                "properties": {
+                    "idPerfil": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "descripcion": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SccUsuarioPerfilDto": {
+                "type": "object",
+                "properties": {
+                    "sccUsuario": {
+                        "$ref": "#/components/schemas/SccUsuarioDto"
+                    },
+                    "sccPerfil": {
+                        "$ref": "#/components/schemas/SccPerfilDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SccSistemaDto": {
+                "type": "object",
+                "properties": {
+                    "idSistema": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "descripcion": {
+                        "type": "string"
+                    },
+                    "icono": {
+                        "type": "string"
+                    },
+                    "link": {
+                        "type": "string"
+                    },
+                    "nroOrden": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SccFormularioDto": {
+                "type": "object",
+                "properties": {
+                    "idFormulario": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "descripcion": {
+                        "type": "string"
+                    },
+                    "fchActualizacion": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "ctrlCodigo": {
+                        "type": "boolean"
+                    },
+                    "ctrlCorrelativo": {
+                        "type": "boolean"
+                    },
+                    "prefijoCorrelativo": {
+                        "type": "string"
+                    },
+                    "cantCorrelativo": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sccSistema": {
+                        "$ref": "#/components/schemas/SccSistemaDto"
+                    },
+                    "link": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SccMenuDto": {
+                "type": "object",
+                "properties": {
+                    "idMenu": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "icono": {
+                        "type": "string"
+                    },
+                    "nroOrden": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sccMenuPadre": {
+                        "$ref": "#/components/schemas/SccMenuDto"
+                    },
+                    "sccFormulario": {
+                        "$ref": "#/components/schemas/SccFormularioDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SccAccionDto": {
+                "type": "object",
+                "properties": {
+                    "idAccion": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "descripcion": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SccFormularioAccionDto": {
+                "type": "object",
+                "properties": {
+                    "sccFormulario": {
+                        "$ref": "#/components/schemas/SccFormularioDto"
+                    },
+                    "sccAccion": {
+                        "$ref": "#/components/schemas/SccAccionDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SccAccesoDto": {
+                "type": "object",
+                "properties": {
+                    "sccPerfil": {
+                        "$ref": "#/components/schemas/SccPerfilDto"
+                    },
+                    "sccFormulario": {
+                        "$ref": "#/components/schemas/SccFormularioDto"
+                    },
+                    "sccAccion": {
+                        "$ref": "#/components/schemas/SccAccionDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "InsertionUsuarioPerfilCustomDto": {
+                "type": "object",
+                "properties": {
+                    "usuario": {
+                        "$ref": "#/components/schemas/SccUsuarioDto"
+                    },
+                    "perfiles": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SccPerfilDto"
+                        }
+                    }
+                }
+            },
+            "AccessDto": {
+                "type": "object",
+                "properties": {
+                    "codigo": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Link": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "type": "string"
+                    },
+                    "hreflang": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "deprecation": {
+                        "type": "string"
+                    },
+                    "profile": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "templated": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Links": {
+                "type": "object",
+                "additionalProperties": {
+                    "$ref": "#/components/schemas/Link"
+                }
+            }
+        },
+        "securitySchemes": {
+            "JWT": {
+                "type": "http",
+                "name": "Authorization",
+                "in": "header",
+                "scheme": "Bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    }
+}

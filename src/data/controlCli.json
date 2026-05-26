@@ -1,0 +1,5488 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Sintad Api Documentation Control Clientes",
+        "description": "Sintad Api Documentation",
+        "contact": {
+            "name": "Sintad",
+            "url": "https://www.sintad.pe",
+            "email": "contacto@sintad.pe"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        },
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://api-cluster-sistemas-internos.sumax.pe/dev/sumax-erp-backend-control-clientes",
+            "description": "Generated server url"
+        }
+    ],
+    "security": [
+        {
+            "JWT": []
+        }
+    ],
+    "paths": {
+        "/api/sgctipocontrollicencias": {
+            "put": {
+                "tags": [
+                    "sgc-tipo-control-licencia-controller"
+                ],
+                "operationId": "update",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcTipoControlLicenciaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-tipo-control-licencia-controller"
+                ],
+                "operationId": "insert",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcTipoControlLicenciaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-tipo-control-licencia-controller"
+                ],
+                "operationId": "delete",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcTipoControlLicenciaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistematipooperadores": {
+            "put": {
+                "tags": [
+                    "sgc-sistema-tipo-operador-controller"
+                ],
+                "operationId": "update_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcSistemaTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-sistema-tipo-operador-controller"
+                ],
+                "operationId": "insert_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcSistemaTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-sistema-tipo-operador-controller"
+                ],
+                "operationId": "delete_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcSistemaTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas": {
+            "put": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "update_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "insert_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "delete_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcoficinas": {
+            "put": {
+                "tags": [
+                    "sgc-oficina-controller"
+                ],
+                "operationId": "update_3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcOficinaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-oficina-controller"
+                ],
+                "operationId": "insert_3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcOficinaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-oficina-controller"
+                ],
+                "operationId": "delete_3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcOficinaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcoficinaaduanas": {
+            "put": {
+                "tags": [
+                    "sgc-oficina-aduana-controller"
+                ],
+                "operationId": "update_4",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcOficinaAduanaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-oficina-aduana-controller"
+                ],
+                "operationId": "insert_4",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcOficinaAduanaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-oficina-aduana-controller"
+                ],
+                "operationId": "delete_4",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcOficinaAduanaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaoficinas": {
+            "put": {
+                "tags": [
+                    "sgc-licencia-oficina-controller"
+                ],
+                "operationId": "update_5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaOficinaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-licencia-oficina-controller"
+                ],
+                "operationId": "insert_5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaOficinaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-licencia-oficina-controller"
+                ],
+                "operationId": "delete_5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaOficinaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientetipooperadores": {
+            "put": {
+                "tags": [
+                    "sgc-licencia-cliente-tipo-operador-controller"
+                ],
+                "operationId": "update_6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaClienteTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-licencia-cliente-tipo-operador-controller"
+                ],
+                "operationId": "insert_6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaClienteTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-licencia-cliente-tipo-operador-controller"
+                ],
+                "operationId": "delete_6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaClienteTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes": {
+            "put": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "update_7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaClienteDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "insert_7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaClienteDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "delete_7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaClienteDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaapis": {
+            "put": {
+                "tags": [
+                    "sgc-licencia-api-controller"
+                ],
+                "operationId": "update_8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-licencia-api-controller"
+                ],
+                "operationId": "insert_8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-licencia-api-controller"
+                ],
+                "operationId": "delete_8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcLicenciaApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcgruposistemas": {
+            "put": {
+                "tags": [
+                    "sgc-grupo-sistema-controller"
+                ],
+                "operationId": "update_9",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcGrupoSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-grupo-sistema-controller"
+                ],
+                "operationId": "insert_9",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcGrupoSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-grupo-sistema-controller"
+                ],
+                "operationId": "delete_9",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcGrupoSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcgrupoempresariales": {
+            "put": {
+                "tags": [
+                    "sgc-grupo-empresarial-controller"
+                ],
+                "operationId": "update_10",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcGrupoEmpresarialDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-grupo-empresarial-controller"
+                ],
+                "operationId": "insert_10",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcGrupoEmpresarialDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-grupo-empresarial-controller"
+                ],
+                "operationId": "delete_10",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcGrupoEmpresarialDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcestadoservicios": {
+            "put": {
+                "tags": [
+                    "sgc-estado-servicio-controller"
+                ],
+                "operationId": "update_11",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcEstadoServicioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-estado-servicio-controller"
+                ],
+                "operationId": "insert_11",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcEstadoServicioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-estado-servicio-controller"
+                ],
+                "operationId": "delete_11",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcEstadoServicioDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgccontratos": {
+            "put": {
+                "tags": [
+                    "sgc-contrato-controller"
+                ],
+                "operationId": "update_12",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcContratoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-contrato-controller"
+                ],
+                "operationId": "insert_12",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcContratoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-contrato-controller"
+                ],
+                "operationId": "delete_12",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcContratoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientetipooperadores": {
+            "put": {
+                "tags": [
+                    "sgc-cliente-tipo-operador-controller"
+                ],
+                "operationId": "update_13",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-cliente-tipo-operador-controller"
+                ],
+                "operationId": "insert_13",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-cliente-tipo-operador-controller"
+                ],
+                "operationId": "delete_13",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteTipoOperadorDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes": {
+            "put": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "update_14",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "insert_14",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "delete_14",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientegruposistemas": {
+            "put": {
+                "tags": [
+                    "sgc-cliente-grupo-sistema-controller"
+                ],
+                "operationId": "update_15",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteGrupoSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-cliente-grupo-sistema-controller"
+                ],
+                "operationId": "insert_15",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteGrupoSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-cliente-grupo-sistema-controller"
+                ],
+                "operationId": "delete_15",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteGrupoSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientegruposistemas/{idCliente}/{idGrupoSistema}/cantidad/{cantidad}": {
+            "put": {
+                "tags": [
+                    "sgc-cliente-grupo-sistema-controller"
+                ],
+                "operationId": "saveOrUpdateByCantidad",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "idGrupoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "cantidad",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientecontactos": {
+            "put": {
+                "tags": [
+                    "sgc-cliente-contacto-controller"
+                ],
+                "operationId": "update_16",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteContactoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-cliente-contacto-controller"
+                ],
+                "operationId": "insert_16",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteContactoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-cliente-contacto-controller"
+                ],
+                "operationId": "delete_16",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteContactoDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclienteaduanas": {
+            "put": {
+                "tags": [
+                    "sgc-cliente-aduana-controller"
+                ],
+                "operationId": "update_17",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteAduanaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-cliente-aduana-controller"
+                ],
+                "operationId": "insert_17",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteAduanaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-cliente-aduana-controller"
+                ],
+                "operationId": "delete_17",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcClienteAduanaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcapis": {
+            "put": {
+                "tags": [
+                    "sgc-api-controller"
+                ],
+                "operationId": "update_18",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-api-controller"
+                ],
+                "operationId": "insert_18",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-api-controller"
+                ],
+                "operationId": "delete_18",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcapikeyes": {
+            "put": {
+                "tags": [
+                    "sgc-api-key-controller"
+                ],
+                "operationId": "update_19",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiKeyDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-api-key-controller"
+                ],
+                "operationId": "insert_19",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiKeyDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-api-key-controller"
+                ],
+                "operationId": "delete_19",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiKeyDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcapikeyapis": {
+            "put": {
+                "tags": [
+                    "sgc-api-key-api-controller"
+                ],
+                "operationId": "update_20",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiKeyApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sgc-api-key-api-controller"
+                ],
+                "operationId": "insert_20",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiKeyApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sgc-api-key-api-controller"
+                ],
+                "operationId": "delete_20",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcApiKeyApiDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgctipocontrollicencias/findAllByIdList": {
+            "post": {
+                "tags": [
+                    "sgc-tipo-control-licencia-controller"
+                ],
+                "operationId": "findAllByIdList",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/updateCustom": {
+            "post": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "updateCustom",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/insertCustom": {
+            "post": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "insertCustom",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SgcSistemaDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findAllByIdList": {
+            "post": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAllByIdList_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/updateAllCustom": {
+            "post": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "updateFchCorteCustom",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/SgcLicenciaClienteDto"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/systemsRentalValidationByNroDocumentoAndCodSistemaList": {
+            "post": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "systemsRentalValidationByNroDocumentoAndCodSistemaList",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SystemsRentalValidationRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgccontratos/update": {
+            "post": {
+                "tags": [
+                    "sgc-contrato-controller"
+                ],
+                "operationId": "update_21",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "contrato": {
+                                        "$ref": "#/components/schemas/SgcContratoDto"
+                                    },
+                                    "urlDocumento": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                },
+                                "required": [
+                                    "contrato"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgccontratos/insert": {
+            "post": {
+                "tags": [
+                    "sgc-contrato-controller"
+                ],
+                "operationId": "insert_21",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "contrato": {
+                                        "$ref": "#/components/schemas/SgcContratoDto"
+                                    },
+                                    "urlDocumento": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                },
+                                "required": [
+                                    "contrato"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/update": {
+            "post": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "update_22",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "cliente": {
+                                        "$ref": "#/components/schemas/SgcClienteDto"
+                                    },
+                                    "imagen": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                },
+                                "required": [
+                                    "cliente"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/insert": {
+            "post": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "insert_22",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "cliente": {
+                                        "$ref": "#/components/schemas/SgcClienteDto"
+                                    },
+                                    "imagen": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                },
+                                "required": [
+                                    "cliente"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/public/systemsRentalValidationByNroDocumentoAndCodSistemaList": {
+            "post": {
+                "tags": [
+                    "public-controller"
+                ],
+                "operationId": "systemsRentalValidationByNroDocumentoAndCodSistemaList_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SystemsRentalValidationRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/params/version": {
+            "get": {
+                "tags": [
+                    "params-controller"
+                ],
+                "operationId": "version",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/params/environment": {
+            "get": {
+                "tags": [
+                    "params-controller"
+                ],
+                "operationId": "environment",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/healthcheck/status": {
+            "get": {
+                "tags": [
+                    "health-check-controller"
+                ],
+                "operationId": "version_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgctipocontrollicencias/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-tipo-control-licencia-controller"
+                ],
+                "operationId": "findById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgctipocontrollicencias/findAll": {
+            "get": {
+                "tags": [
+                    "sgc-tipo-control-licencia-controller"
+                ],
+                "operationId": "findAll",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgctipocontrollicencias/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-tipo-control-licencia-controller"
+                ],
+                "operationId": "findAllByEstadoNgSelect",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistematipooperadores/{sgcSistema}/{idTipoOperador}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-tipo-operador-controller"
+                ],
+                "operationId": "findById_1",
+                "parameters": [
+                    {
+                        "name": "sgcSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "idTipoOperador",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findById_2",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/tbtipooperadores/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAllTipoOperadoresByEstadoNgSelect",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findSistemaAndIdTipoOperadoresByNroDocumentoAndCodigoSistema/{nroDocumento}/{codigoSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findSistemaAndIdTipoOperadoresByNroDocumentoAndCodigoSistema",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "codigoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findIdByCodigo/{codigo}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findIdByCodigo",
+                "parameters": [
+                    {
+                        "name": "codigo",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findAll": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAll_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findAllTbTipoOperadorByIdSistema/{idSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAllTbTipoOperadorByIdSistema",
+                "parameters": [
+                    {
+                        "name": "idSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findAllSciSistemaByNroDocumentoAndEstado/{nroDocumento}/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAllCodigoSistemaByNroDocumentoAndEstado",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findAllCustom": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAllCustom",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findAllByNroDocumentoAndEstado/{nroDocumento}/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAllByNroDocumentoAndEstado",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAllByEstadoNgSelect_1",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/findAllBasicActive": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "findAllBasicActive",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcsistemas/existByNroDocumentoAndCodigoSistema/{nroDocumento}/{codSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-sistema-controller"
+                ],
+                "operationId": "existByNroDocumentoAndCodigoSistema",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "codSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcoficinas/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-oficina-controller"
+                ],
+                "operationId": "findById_3",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcoficinas/findAllByIdCliente/{idCliente}": {
+            "get": {
+                "tags": [
+                    "sgc-oficina-controller"
+                ],
+                "operationId": "findAllByIdCliente",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcoficinaaduanas/{sgcOficina}/{idAduana}": {
+            "get": {
+                "tags": [
+                    "sgc-oficina-aduana-controller"
+                ],
+                "operationId": "findById_4",
+                "parameters": [
+                    {
+                        "name": "sgcOficina",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "idAduana",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaoficinas/{sgcOficina}/{sgcSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-oficina-controller"
+                ],
+                "operationId": "findById_5",
+                "parameters": [
+                    {
+                        "name": "sgcOficina",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sgcSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaoficinas/findAllSgcSistemaByIdOficinaAndEstadoNgSelect/{idOficina}/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-oficina-controller"
+                ],
+                "operationId": "findAllSgcSistemaByIdOficinaAndEstadoNgSelect",
+                "parameters": [
+                    {
+                        "name": "idOficina",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaoficinas/findAllByIdOficina/{idOficina}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-oficina-controller"
+                ],
+                "operationId": "findAllByIdOficina",
+                "parameters": [
+                    {
+                        "name": "idOficina",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientetipooperadores/{sgcCliente}/{sgcSistema}/{idTipoOperador}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-tipo-operador-controller"
+                ],
+                "operationId": "findById_6",
+                "parameters": [
+                    {
+                        "name": "sgcCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sgcSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "idTipoOperador",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/{sgcCliente}/{sgcSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "findById_7",
+                "parameters": [
+                    {
+                        "name": "sgcCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sgcSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/systemsRentalValidationByNroDocumentoForSistemasOperativos/{nroDocumento}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "systemsRentalValidationByNroDocumentoForSistemasOperativos",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/findByNroRucAndCodigoSistema/{nroRuc}/{codigoSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "findResumenByNroRucAndCodigoSistema",
+                "parameters": [
+                    {
+                        "name": "nroRuc",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "codigoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/findAllTbTipoOperadorByIdLicenciaCliente/{sgcCliente}/{sgcSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "findAllTbTipoOperadorByIdSistema_1",
+                "parameters": [
+                    {
+                        "name": "sgcCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sgcSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/findAllSgcSistemaByIdGrupoSistemaAndEstadoNgSelect/{idCliente}/{idGrupoSistema}/{estado}/{isGroupedSearch}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "findAllSgcSistemaByIdGrupoSistemaAndEstadoNgSelect",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "idGrupoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "isGroupedSearch",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/findAllSgcSistemaByIdClienteAndEstadoNgSelect/{idCliente}/{estado}/{isGroupedSearch}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "findAllSgcSistemaByIdClienteAndEstadoNgSelect",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "isGroupedSearch",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/findAllByNroDocumentoAndEstadoSistema/{nroDocumento}/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "findAllByNroDocumentoAndEstadoSistema",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/findAllByIdClienteCustom/{idCliente}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "findAllByIdClienteCustom",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaclientes/findAllByIdCliente/{idCliente}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-cliente-controller"
+                ],
+                "operationId": "findAllByIdCliente_1",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgclicenciaapis/{sgcCliente}/{sgcApi}": {
+            "get": {
+                "tags": [
+                    "sgc-licencia-api-controller"
+                ],
+                "operationId": "findById_8",
+                "parameters": [
+                    {
+                        "name": "sgcCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sgcApi",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcgruposistemas/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-grupo-sistema-controller"
+                ],
+                "operationId": "findById_9",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcgruposistemas/findSistemasHabilitadosByIdGrupoSistema/{idGrupoSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-grupo-sistema-controller"
+                ],
+                "operationId": "findSistemasHabilitadosByIdGrupoSistema",
+                "parameters": [
+                    {
+                        "name": "idGrupoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcgruposistemas/findAllByEstado/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-grupo-sistema-controller"
+                ],
+                "operationId": "findAllByEstado",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcgrupoempresariales/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-grupo-empresarial-controller"
+                ],
+                "operationId": "findById_10",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcgrupoempresariales/findAll": {
+            "get": {
+                "tags": [
+                    "sgc-grupo-empresarial-controller"
+                ],
+                "operationId": "findAll_2",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcgrupoempresariales/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-grupo-empresarial-controller"
+                ],
+                "operationId": "findAllByEstadoNgSelect_2",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcestadoservicios/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-estado-servicio-controller"
+                ],
+                "operationId": "findById_11",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcestadoservicios/findAll": {
+            "get": {
+                "tags": [
+                    "sgc-estado-servicio-controller"
+                ],
+                "operationId": "findAll_3",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcestadoservicios/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-estado-servicio-controller"
+                ],
+                "operationId": "findAllByEstadoNgSelect_3",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgccontratos/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-contrato-controller"
+                ],
+                "operationId": "findById_12",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgccontratos/findAllByIdCliente/{idCliente}": {
+            "get": {
+                "tags": [
+                    "sgc-contrato-controller"
+                ],
+                "operationId": "findAllByIdCliente_2",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientetipooperadores/{sgcCliente}/{idTipoOperador}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-tipo-operador-controller"
+                ],
+                "operationId": "findById_13",
+                "parameters": [
+                    {
+                        "name": "sgcCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "idTipoOperador",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findById_14",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/findByNroDocumento/{nroDocumento}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findByNroDocumento",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/findByIdTipoDocumentoAndNroDocumento/{idTipoDocumento}/{nroDocumento}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findByIdTipoDocumentoAndNroDocumento",
+                "parameters": [
+                    {
+                        "name": "idTipoDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/findAll": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findAll_4",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/findAllTbTipoOperadorByNroDocumento/{nroDocumento}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findAllTbTipoOperadorByNroDocumento",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/findAllTbTipoOperadorByIdCliente/{idCliente}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findAllTbTipoOperadorByIdSistema_2",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/findAllCustom": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findAllCustom_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/findAllByEstadoNgSelect/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findAllByEstadoNgSelect_4",
+                "parameters": [
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientes/findAllByCodigoSistemaAndEstado/{codigoSistema}/{estado}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-controller"
+                ],
+                "operationId": "findAllByCodigoSistemaAndEstado",
+                "parameters": [
+                    {
+                        "name": "codigoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "estado",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientegruposistemas/{sgcCliente}/{sgcGrupoSistema}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-grupo-sistema-controller"
+                ],
+                "operationId": "findById_15",
+                "parameters": [
+                    {
+                        "name": "sgcCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sgcGrupoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientegruposistemas/findAllByNroDocumento/{nroDoc}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-grupo-sistema-controller"
+                ],
+                "operationId": "findAllByNroDocumento",
+                "parameters": [
+                    {
+                        "name": "nroDoc",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientegruposistemas/findAllByIdCliente/{idCliente}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-grupo-sistema-controller"
+                ],
+                "operationId": "findAllByIdCliente_3",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientecontactos/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-contacto-controller"
+                ],
+                "operationId": "findById_16",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientecontactos/findByIdTipoDocumentoAndNroDocumento/{idTipoDocumento}/{nroDocumento}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-contacto-controller"
+                ],
+                "operationId": "findByIdTipoDocumentoAndNroDocumento_1",
+                "parameters": [
+                    {
+                        "name": "idTipoDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclientecontactos/findAllByIdCliente/{idCliente}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-contacto-controller"
+                ],
+                "operationId": "findAllByIdCliente_4",
+                "parameters": [
+                    {
+                        "name": "idCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcclienteaduanas/{sgcCliente}/{idAduana}": {
+            "get": {
+                "tags": [
+                    "sgc-cliente-aduana-controller"
+                ],
+                "operationId": "findById_17",
+                "parameters": [
+                    {
+                        "name": "sgcCliente",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "idAduana",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcapis/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-api-controller"
+                ],
+                "operationId": "findById_18",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcapikeyes/{id}": {
+            "get": {
+                "tags": [
+                    "sgc-api-key-controller"
+                ],
+                "operationId": "findById_19",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/sgcapikeyapis/{sgcApiKey}/{sgcApi}": {
+            "get": {
+                "tags": [
+                    "sgc-api-key-api-controller"
+                ],
+                "operationId": "findById_20",
+                "parameters": [
+                    {
+                        "name": "sgcApiKey",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sgcApi",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/public/systemRentalValidation/{nroDocumento}": {
+            "get": {
+                "tags": [
+                    "public-controller"
+                ],
+                "operationId": "systemRentalValidation",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/public/systemRentalValidation/{nroDocumento}/{codigoSistema}": {
+            "get": {
+                "tags": [
+                    "public-controller"
+                ],
+                "operationId": "systemRentalValidation_1",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "codigoSistema",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/public/licenciaApiKeyRentalValidation/{nroDocumento}/{apiKey}/{apiCode}": {
+            "get": {
+                "tags": [
+                    "public-controller"
+                ],
+                "operationId": "licenciaApiKeyRentalValidation",
+                "parameters": [
+                    {
+                        "name": "nroDocumento",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "apiKey",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "apiCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "SgcTipoControlLicenciaDto": {
+                "type": "object",
+                "properties": {
+                    "idTipoControlLicencia": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "ctrlCantidad": {
+                        "type": "boolean"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "ApiResponse": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "type": "boolean"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "titulo": {
+                        "type": "string"
+                    },
+                    "mensaje": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "Informativo",
+                            "Advertencia",
+                            "Error"
+                        ]
+                    },
+                    "fecha": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "data": {}
+                }
+            },
+            "SgcClienteContactoDto": {
+                "type": "object",
+                "properties": {
+                    "idClienteContacto": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sgcCliente": {},
+                    "idTipoDocumento": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbTipoDocumento": {
+                        "$ref": "#/components/schemas/TbTipoDocumentoDto"
+                    },
+                    "nroDocumento": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "apellido1": {
+                        "type": "string"
+                    },
+                    "apellido2": {
+                        "type": "string"
+                    },
+                    "sexo": {
+                        "type": "string",
+                        "enum": [
+                            "M",
+                            "F"
+                        ]
+                    },
+                    "telefonoMovil": {
+                        "type": "string"
+                    },
+                    "telefonoFijo": {
+                        "type": "string"
+                    },
+                    "correoElectronico": {
+                        "type": "string"
+                    },
+                    "cargo": {
+                        "type": "string"
+                    },
+                    "ctrlPrincipal": {
+                        "type": "boolean"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcClienteDto": {
+                "type": "object",
+                "properties": {
+                    "idCliente": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "idTipoDocumento": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbTipoDocumento": {
+                        "$ref": "#/components/schemas/TbTipoDocumentoDto"
+                    },
+                    "nroDocumento": {
+                        "type": "string"
+                    },
+                    "razonSocial": {
+                        "type": "string"
+                    },
+                    "nombreComercial": {
+                        "type": "string"
+                    },
+                    "sgcGrupoEmpresarial": {
+                        "$ref": "#/components/schemas/SgcGrupoEmpresarialDto"
+                    },
+                    "idPais": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbPais": {
+                        "$ref": "#/components/schemas/TbPaisDto"
+                    },
+                    "idTipoOperador": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbTipoOperador": {
+                        "$ref": "#/components/schemas/TbTipoOperadorDto"
+                    },
+                    "imagen": {
+                        "type": "string"
+                    },
+                    "dominio": {
+                        "type": "string"
+                    },
+                    "colorCorporativo": {
+                        "type": "string"
+                    },
+                    "dominioCorreoElectronico": {
+                        "type": "string"
+                    },
+                    "domicilioFiscal": {
+                        "type": "string"
+                    },
+                    "idUbicacionGeografica": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "idActividadEconomica": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "ctrlSumax": {
+                        "type": "boolean"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "sgcClienteContactos": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SgcClienteContactoDto"
+                        }
+                    },
+                    "sgcClienteTipoOperadores": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SgcClienteTipoOperadorDto"
+                        }
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcClienteGrupoSistemaDto": {
+                "type": "object",
+                "properties": {
+                    "sgcCliente": {
+                        "$ref": "#/components/schemas/SgcClienteDto"
+                    },
+                    "sgcGrupoSistema": {},
+                    "cantidad": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcClienteTipoOperadorDto": {
+                "type": "object",
+                "properties": {
+                    "sgcCliente": {},
+                    "idTipoOperador": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbTipoOperador": {
+                        "$ref": "#/components/schemas/TbTipoOperadorDto"
+                    },
+                    "codigoAgente": {
+                        "type": "string"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcEstadoServicioDto": {
+                "type": "object",
+                "properties": {
+                    "idEstadoServicio": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "color": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcGrupoEmpresarialDto": {
+                "type": "object",
+                "properties": {
+                    "idGrupoEmpresarial": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcGrupoSistemaDto": {
+                "type": "object",
+                "properties": {
+                    "idGrupoSistema": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "sgcTipoControlLicencia": {
+                        "$ref": "#/components/schemas/SgcTipoControlLicenciaDto"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "sgcClienteGrupoSistemas": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SgcClienteGrupoSistemaDto"
+                        }
+                    },
+                    "sgcSistemas": {
+                        "type": "array",
+                        "items": {}
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcLicenciaClienteDto": {
+                "type": "object",
+                "properties": {
+                    "sgcCliente": {
+                        "$ref": "#/components/schemas/SgcClienteDto"
+                    },
+                    "sgcSistema": {},
+                    "cantidad": {
+                        "type": "number"
+                    },
+                    "fchCorte": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "diasAviso": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sgcEstadoServicio": {
+                        "$ref": "#/components/schemas/SgcEstadoServicioDto"
+                    },
+                    "sgcLicenciaClienteTipoOperadores": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SgcLicenciaClienteTipoOperadorDto"
+                        }
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcLicenciaClienteTipoOperadorDto": {
+                "type": "object",
+                "properties": {
+                    "sgcLicenciaCliente": {},
+                    "idTipoOperador": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbTipoOperador": {
+                        "$ref": "#/components/schemas/TbTipoOperadorDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcSistemaDto": {
+                "type": "object",
+                "properties": {
+                    "idSistema": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "descripcion": {
+                        "type": "string"
+                    },
+                    "idTipoControlLicencia": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sgcTipoControlLicencia": {
+                        "$ref": "#/components/schemas/SgcTipoControlLicenciaDto"
+                    },
+                    "tipoLicencia": {
+                        "type": "string",
+                        "enum": [
+                            "C",
+                            "O"
+                        ]
+                    },
+                    "ctrlMultipleOperador": {
+                        "type": "boolean"
+                    },
+                    "tipoClasificacion": {
+                        "type": "string",
+                        "enum": [
+                            "P",
+                            "C"
+                        ]
+                    },
+                    "idGrupoSistema": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sgcGrupoSistema": {
+                        "$ref": "#/components/schemas/SgcGrupoSistemaDto"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "sgcLicenciaClientes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SgcLicenciaClienteDto"
+                        }
+                    },
+                    "sgcSistemaTipoOperadores": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SgcSistemaTipoOperadorDto"
+                        }
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcSistemaTipoOperadorDto": {
+                "type": "object",
+                "properties": {
+                    "sgcSistema": {
+                        "$ref": "#/components/schemas/SgcSistemaDto"
+                    },
+                    "idTipoOperador": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbTipoOperador": {
+                        "$ref": "#/components/schemas/TbTipoOperadorDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "TbContinenteDto": {
+                "type": "object",
+                "properties": {
+                    "idContinente": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TbMonedaDto": {
+                "type": "object",
+                "properties": {
+                    "idMoneda": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "simbolo": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TbPaisDto": {
+                "type": "object",
+                "properties": {
+                    "idPais": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "tbMoneda": {
+                        "$ref": "#/components/schemas/TbMonedaDto"
+                    },
+                    "tbContinente": {
+                        "$ref": "#/components/schemas/TbContinenteDto"
+                    },
+                    "codigoSunat": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TbTipoDocumentoDto": {
+                "type": "object",
+                "properties": {
+                    "idTipoDocumento": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "descripcion": {
+                        "type": "string"
+                    },
+                    "codigoAduana": {
+                        "type": "string"
+                    },
+                    "longitudMinima": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "longitudMaxima": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tipoCaracteres": {
+                        "type": "string",
+                        "enum": [
+                            "N",
+                            "A"
+                        ]
+                    },
+                    "expresionRegular": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TbTipoOperadorDto": {
+                "type": "object",
+                "properties": {
+                    "idTipoOperador": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "icono": {
+                        "type": "string"
+                    },
+                    "codigoSigad": {
+                        "type": "string"
+                    },
+                    "codigoTeleweb": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "SgcOficinaDto": {
+                "type": "object",
+                "properties": {
+                    "idOficina": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sgcCliente": {
+                        "$ref": "#/components/schemas/SgcClienteDto"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "direccion": {
+                        "type": "string"
+                    },
+                    "idUbicacionGeografica": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbUbicacionGeografica": {
+                        "$ref": "#/components/schemas/TbUbicacionGeograficaDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "TbUbicacionGeograficaDto": {
+                "type": "object",
+                "properties": {
+                    "idUbicacionGeografica": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "nivel": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "idUbigeoPadre": {
+                        "$ref": "#/components/schemas/TbUbicacionGeograficaDto"
+                    },
+                    "tbPais": {
+                        "$ref": "#/components/schemas/TbPaisDto"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "SgcOficinaAduanaDto": {
+                "type": "object",
+                "properties": {
+                    "sgcOficina": {
+                        "$ref": "#/components/schemas/SgcOficinaDto"
+                    },
+                    "idAduana": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tbAduana": {
+                        "$ref": "#/components/schemas/TbAduanaDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "TbAduanaDto": {
+                "type": "object",
+                "properties": {
+                    "idAduana": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "SgcLicenciaOficinaDto": {
+                "type": "object",
+                "properties": {
+                    "sgcOficina": {
+                        "$ref": "#/components/schemas/SgcOficinaDto"
+                    },
+                    "sgcSistema": {
+                        "$ref": "#/components/schemas/SgcSistemaDto"
+                    },
+                    "cantidad": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "fchCorte": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "diasAviso": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sgcEstadoServicio": {
+                        "$ref": "#/components/schemas/SgcEstadoServicioDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcApiDto": {
+                "type": "object",
+                "properties": {
+                    "idApi": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "codigo": {
+                        "type": "string"
+                    },
+                    "nombre": {
+                        "type": "string"
+                    },
+                    "descripcion": {
+                        "type": "string"
+                    },
+                    "endpoint": {
+                        "type": "string"
+                    },
+                    "metodoHttp": {
+                        "type": "string"
+                    },
+                    "sgcTipoControlLicencia": {
+                        "$ref": "#/components/schemas/SgcTipoControlLicenciaDto"
+                    },
+                    "sgcSistema": {
+                        "$ref": "#/components/schemas/SgcSistemaDto"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcLicenciaApiDto": {
+                "type": "object",
+                "properties": {
+                    "sgcCliente": {
+                        "$ref": "#/components/schemas/SgcClienteDto"
+                    },
+                    "sgcApi": {
+                        "$ref": "#/components/schemas/SgcApiDto"
+                    },
+                    "cantidad": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "fchCorte": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "sgcEstadoServicio": {
+                        "$ref": "#/components/schemas/SgcEstadoServicioDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcContratoDto": {
+                "type": "object",
+                "properties": {
+                    "idContrato": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sgcCliente": {
+                        "$ref": "#/components/schemas/SgcClienteDto"
+                    },
+                    "nroContrato": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "fchInicio": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "fchFin": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "urlDocumento": {
+                        "type": "string"
+                    },
+                    "diaPago": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcClienteAduanaDto": {
+                "type": "object",
+                "properties": {
+                    "sgcCliente": {
+                        "$ref": "#/components/schemas/SgcClienteDto"
+                    },
+                    "idAduana": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcApiKeyDto": {
+                "type": "object",
+                "properties": {
+                    "idApiKey": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sgcCliente": {
+                        "$ref": "#/components/schemas/SgcClienteDto"
+                    },
+                    "apiKey": {
+                        "type": "string"
+                    },
+                    "fchCreacion": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "fchExpiracion": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "descripcion": {
+                        "type": "string"
+                    },
+                    "cantidadMaxima": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "ctrlApiTotal": {
+                        "type": "boolean"
+                    },
+                    "estado": {
+                        "type": "boolean"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SgcApiKeyApiDto": {
+                "type": "object",
+                "properties": {
+                    "sgcApiKey": {
+                        "$ref": "#/components/schemas/SgcApiKeyDto"
+                    },
+                    "sgcApi": {
+                        "$ref": "#/components/schemas/SgcApiDto"
+                    },
+                    "_links": {
+                        "$ref": "#/components/schemas/Links"
+                    }
+                }
+            },
+            "SystemsRentalValidationRequestDto": {
+                "type": "object",
+                "properties": {
+                    "nroDocumento": {
+                        "type": "string"
+                    },
+                    "codSistemas": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "Link": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "type": "string"
+                    },
+                    "hreflang": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "deprecation": {
+                        "type": "string"
+                    },
+                    "profile": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "templated": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Links": {
+                "type": "object",
+                "additionalProperties": {
+                    "$ref": "#/components/schemas/Link"
+                }
+            }
+        },
+        "securitySchemes": {
+            "JWT": {
+                "type": "http",
+                "name": "Authorization",
+                "in": "header",
+                "scheme": "Bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    }
+}
