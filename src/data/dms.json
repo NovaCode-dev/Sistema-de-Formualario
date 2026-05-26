@@ -1,0 +1,836 @@
+[
+    {
+        "controller_class": "ExternalAPIController",
+        "base_path": "/api/external",
+        "endpoints": [
+            {
+                "method_name": "handleExternal",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/api/external"
+            }
+        ]
+    },
+    {
+        "controller_class": "HealthCheckController",
+        "base_path": "/healthcheck",
+        "endpoints": [
+            {
+                "method_name": "version",
+                "http_method": "GET",
+                "path": "/status",
+                "full_path": "/healthcheck/status"
+            }
+        ]
+    },
+    {
+        "controller_class": "ParamsController",
+        "base_path": "/params",
+        "endpoints": [
+            {
+                "method_name": "version",
+                "http_method": "GET",
+                "path": "/version",
+                "full_path": "/params/version"
+            }
+        ]
+    },
+    {
+        "controller_class": "PublicAPI",
+        "base_path": "/public",
+        "endpoints": [
+            {
+                "method_name": "expirationLink",
+                "http_method": "GET",
+                "path": "/linkValidation/{ruc}/{id}",
+                "full_path": "/public/linkValidation/{ruc}/{id}"
+            }
+        ]
+    },
+    {
+        "controller_class": "SceController",
+        "base_path": "/sce",
+        "endpoints": [
+            {
+                "method_name": "uploadFileMultipart",
+                "http_method": "POST",
+                "path": "/sgdcontenido/uploadFileMultipart",
+                "full_path": "/sce/sgdcontenido/uploadFileMultipart"
+            },
+            {
+                "method_name": "uploadFile",
+                "http_method": "POST",
+                "path": "/sgdcontenido/uploadFile",
+                "full_path": "/sce/sgdcontenido/uploadFile"
+            },
+            {
+                "method_name": "uploadFileCustom",
+                "http_method": "POST",
+                "path": "/sgdcontenido/uploadFileCustom",
+                "full_path": "/sce/sgdcontenido/uploadFileCustom"
+            },
+            {
+                "method_name": "findAllAtributosActivesByCodModulo",
+                "http_method": "GET",
+                "path": "/sgdatributo/findAllActivesByCodModulo/{codModulo}",
+                "full_path": "/sce/sgdatributo/findAllActivesByCodModulo/{codModulo}"
+            },
+            {
+                "method_name": "findAllActives",
+                "http_method": "GET",
+                "path": "/sgdtipoarchivo/findAllActives",
+                "full_path": "/sce/sgdtipoarchivo/findAllActives"
+            },
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "/sgdusuario/add",
+                "full_path": "/sce/sgdusuario/add"
+            },
+            {
+                "method_name": "testIfContenidoExists",
+                "http_method": "GET",
+                "path": "/sgdcontenido/testIfContenidoExists/{idContenido}",
+                "full_path": "/sce/sgdcontenido/testIfContenidoExists/{idContenido}"
+            },
+            {
+                "method_name": "updateCtrlPublicoBySgdContenidoList",
+                "http_method": "PUT",
+                "path": "/sgdcontenido/updateCtrlPublicoBySgdContenidoList",
+                "full_path": "/sce/sgdcontenido/updateCtrlPublicoBySgdContenidoList"
+            },
+            {
+                "method_name": "updateContenidoAtributos",
+                "http_method": "PUT",
+                "path": "/sgdcontenidoatributo",
+                "full_path": "/sce/sgdcontenidoatributo"
+            },
+            {
+                "method_name": "archive",
+                "http_method": "DELETE",
+                "path": "/sgdcontenido/archive/{idContenido}",
+                "full_path": "/sce/sgdcontenido/archive/{idContenido}"
+            },
+            {
+                "method_name": "findAllSharedByModulo",
+                "http_method": "GET",
+                "path": "/sgdcontenido/findAllSharedByCodModulo/{codModulo}",
+                "full_path": "/sce/sgdcontenido/findAllSharedByCodModulo/{codModulo}"
+            },
+            {
+                "method_name": "findAllSharedByCodModuloListAndAtributoList",
+                "http_method": "POST",
+                "path": "/sgdcontenido/findAllSharedByCodModuloListAndAtributoList",
+                "full_path": "/sce/sgdcontenido/findAllSharedByCodModuloListAndAtributoList"
+            },
+            {
+                "method_name": "findPredeterminado",
+                "http_method": "GET",
+                "path": "/sgdempresa/findPredeterminado",
+                "full_path": "/sce/sgdempresa/findPredeterminado"
+            },
+            {
+                "method_name": "findByCodigo",
+                "http_method": "GET",
+                "path": "/sgdmoduloatributo/findByCodigoSgdModuloAtributo/{codigo}",
+                "full_path": "/sce/sgdmoduloatributo/findByCodigoSgdModuloAtributo/{codigo}"
+            },
+            {
+                "method_name": "findAllByIdList",
+                "http_method": "POST",
+                "path": "/sgdatributo/findAllByIdList",
+                "full_path": "/sce/sgdatributo/findAllByIdList"
+            },
+            {
+                "method_name": "findAllByCodigoList",
+                "http_method": "POST",
+                "path": "/sgdatributo/findAllByCodigoList",
+                "full_path": "/sce/sgdatributo/findAllByCodigoList"
+            },
+            {
+                "method_name": "findByIdAtributo",
+                "http_method": "GET",
+                "path": "/sgdatributo/findByIdAtributo/{idAtributo}",
+                "full_path": "/sce/sgdatributo/findByIdAtributo/{idAtributo}"
+            },
+            {
+                "method_name": "delete",
+                "http_method": "DELETE",
+                "path": "/sgdcontenido/delete/{idContenido}",
+                "full_path": "/sce/sgdcontenido/delete/{idContenido}"
+            },
+            {
+                "method_name": "deleteByRuleLifeCycle",
+                "http_method": "DELETE",
+                "path": "/sgdcontenido/deleteByRuleLifeCycle",
+                "full_path": "/sce/sgdcontenido/deleteByRuleLifeCycle"
+            },
+            {
+                "method_name": "deleteContenidos",
+                "http_method": "DELETE",
+                "path": "/sgdcontenido/deleteContenidos",
+                "full_path": "/sce/sgdcontenido/deleteContenidos"
+            },
+            {
+                "method_name": "findAllActivesByIdModulo",
+                "http_method": "GET",
+                "path": "/sgdtipodocumento/findAllActivesByIdModulo/{idModulo}",
+                "full_path": "/sce/sgdtipodocumento/findAllActivesByIdModulo/{idModulo}"
+            },
+            {
+                "method_name": "findAllActivesByCodigoModulo",
+                "http_method": "GET",
+                "path": "/sgdtipodocumento/findAllActivesByCodModulo/{codModulo}",
+                "full_path": "/sce/sgdtipodocumento/findAllActivesByCodModulo/{codModulo}"
+            },
+            {
+                "method_name": "findSgdEmpresaByNroDocumento",
+                "http_method": "GET",
+                "path": "/sgdempresa/findSgdEmpresaByNroDocumento/{nroDocumento}",
+                "full_path": "/sce/sgdempresa/findSgdEmpresaByNroDocumento/{nroDocumento}"
+            },
+            {
+                "method_name": "findAllBySearch",
+                "http_method": "POST",
+                "path": "/sgdcontenido/findAllBySearch",
+                "full_path": "/sce/sgdcontenido/findAllBySearch"
+            },
+            {
+                "method_name": "uploadMultipleContenido",
+                "http_method": "POST",
+                "path": "/sgdcontenido/uploadMultipleContenido",
+                "full_path": "/sce/sgdcontenido/uploadMultipleContenido"
+            },
+            {
+                "method_name": "uploadMultipleContenidoCustom",
+                "http_method": "POST",
+                "path": "/sgdcontenido/uploadMultipleContenidoCustom",
+                "full_path": "/sce/sgdcontenido/uploadMultipleContenidoCustom"
+            },
+            {
+                "method_name": "getPresignedUrlsByIdList",
+                "http_method": "POST",
+                "path": "/sgdcontenido/getPresignedUrlsByIdList",
+                "full_path": "/sce/sgdcontenido/getPresignedUrlsByIdList"
+            },
+            {
+                "method_name": "findAllByCodigoModuloAndUbicacion",
+                "http_method": "POST",
+                "path": "/sgdcontenido/findAllByCodigoModuloAndUbicacion/{codigoModulo}",
+                "full_path": "/sce/sgdcontenido/findAllByCodigoModuloAndUbicacion/{codigoModulo}"
+            },
+            {
+                "method_name": "downloadFile",
+                "http_method": "GET",
+                "path": "/sgdcontenido/downloadFile/{idContenido}",
+                "full_path": "/sce/sgdcontenido/downloadFile/{idContenido}"
+            },
+            {
+                "method_name": "downloadFilesBySearch",
+                "http_method": "POST",
+                "path": "/sgdcontenido/downloadFilesBySearch",
+                "full_path": "/sce/sgdcontenido/downloadFilesBySearch"
+            },
+            {
+                "method_name": "downloadFiles",
+                "http_method": "POST",
+                "path": "/sgdcontenido/downloadFiles",
+                "full_path": "/sce/sgdcontenido/downloadFiles"
+            },
+            {
+                "method_name": "downloadFileCustom",
+                "http_method": "POST",
+                "path": "/sgdcontenido/downloadFileCustom",
+                "full_path": "/sce/sgdcontenido/downloadFileCustom"
+            }
+        ]
+    },
+    {
+        "controller_class": "SecurityController",
+        "base_path": "/auth",
+        "endpoints": [
+            {
+                "method_name": "login",
+                "http_method": "POST",
+                "path": "/login",
+                "full_path": "/auth/login"
+            },
+            {
+                "method_name": "loginInvitado",
+                "http_method": "POST",
+                "path": "/loginInvitado",
+                "full_path": "/auth/loginInvitado"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdAtributoController",
+        "base_path": "/sgdatributo",
+        "endpoints": [
+            {
+                "method_name": "findAllActives",
+                "http_method": "GET",
+                "path": "/findAllActives",
+                "full_path": "/sgdatributo/findAllActives"
+            },
+            {
+                "method_name": "findAllActivesByCtrlRutaAndEstado",
+                "http_method": "GET",
+                "path": "/findAllActivesByCtrlRutaAndEstado",
+                "full_path": "/sgdatributo/findAllActivesByCtrlRutaAndEstado"
+            },
+            {
+                "method_name": "findAllActivesByIdModulo",
+                "http_method": "GET",
+                "path": "/findAllActivesByIdModulo/{idModulo}",
+                "full_path": "/sgdatributo/findAllActivesByIdModulo/{idModulo}"
+            },
+            {
+                "method_name": "findAllActivesByCodModulo",
+                "http_method": "GET",
+                "path": "/findAllActivesByCodModulo/{codModulo}",
+                "full_path": "/sgdatributo/findAllActivesByCodModulo/{codModulo}"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdComparadorController",
+        "base_path": "/sgdcomparador",
+        "endpoints": [
+            {
+                "method_name": "findAllActivesByIdTipoAtributo",
+                "http_method": "GET",
+                "path": "/findAllActivesByIdTipoAtributo/{idTipoAtributo}",
+                "full_path": "/sgdcomparador/findAllActivesByIdTipoAtributo/{idTipoAtributo}"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdConexionController",
+        "base_path": "/sgdconexion",
+        "endpoints": [
+            {
+                "method_name": "findAll",
+                "http_method": "GET",
+                "path": "",
+                "full_path": "/sgdconexion"
+            },
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/sgdconexion"
+            },
+            {
+                "method_name": "update",
+                "http_method": "PUT",
+                "path": "",
+                "full_path": "/sgdconexion"
+            },
+            {
+                "method_name": "delete",
+                "http_method": "DELETE",
+                "path": "/{id}",
+                "full_path": "/sgdconexion/{id}"
+            },
+            {
+                "method_name": "testConnection",
+                "http_method": "POST",
+                "path": "/test",
+                "full_path": "/sgdconexion/test"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdContenidoAtributoController",
+        "base_path": "/sgdcontenidoatributo",
+        "endpoints": [
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/sgdcontenidoatributo"
+            },
+            {
+                "method_name": "insertAll",
+                "http_method": "POST",
+                "path": "/insertList",
+                "full_path": "/sgdcontenidoatributo/insertList"
+            },
+            {
+                "method_name": "deleteById",
+                "http_method": "DELETE",
+                "path": "/{idContenidoAtributo}/{idUsuario}",
+                "full_path": "/sgdcontenidoatributo/{idContenidoAtributo}/{idUsuario}"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdContenidoController",
+        "base_path": "/sgdcontenido",
+        "endpoints": [
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/sgdcontenido"
+            },
+            {
+                "method_name": "update",
+                "http_method": "PUT",
+                "path": "",
+                "full_path": "/sgdcontenido"
+            },
+            {
+                "method_name": "findById",
+                "http_method": "GET",
+                "path": "/{idContenido}",
+                "full_path": "/sgdcontenido/{idContenido}"
+            },
+            {
+                "method_name": "copyFileOrDir",
+                "http_method": "POST",
+                "path": "/copyFileOrDir/{idUsuario}",
+                "full_path": "/sgdcontenido/copyFileOrDir/{idUsuario}"
+            },
+            {
+                "method_name": "moveFileOrDir",
+                "http_method": "POST",
+                "path": "/moveFileOrDir/{idUsuario}",
+                "full_path": "/sgdcontenido/moveFileOrDir/{idUsuario}"
+            },
+            {
+                "method_name": "uploadFileMultipart",
+                "http_method": "POST",
+                "path": "/uploadFileMultipart",
+                "full_path": "/sgdcontenido/uploadFileMultipart"
+            },
+            {
+                "method_name": "uploadFile",
+                "http_method": "POST",
+                "path": "/uploadFile",
+                "full_path": "/sgdcontenido/uploadFile"
+            },
+            {
+                "method_name": "downloadFile",
+                "http_method": "GET",
+                "path": "/downloadFile/{idContenido}/{idUsuario}",
+                "full_path": "/sgdcontenido/downloadFile/{idContenido}/{idUsuario}"
+            },
+            {
+                "method_name": "findAllByFiltro",
+                "http_method": "POST",
+                "path": "/findAllByFiltro",
+                "full_path": "/sgdcontenido/findAllByFiltro"
+            },
+            {
+                "method_name": "findAllAllowedByIdModuloAndIdUsuario",
+                "http_method": "GET",
+                "path": "/findAllAllowedByIdModuloAndIdUsuario/{idModulo}/{idUsuario}",
+                "full_path": "/sgdcontenido/findAllAllowedByIdModuloAndIdUsuario/{idModulo}/{idUsuario}"
+            },
+            {
+                "method_name": "findAllAllowedByIdContenidoPadreAndIdUsuario",
+                "http_method": "GET",
+                "path": "/findAllAllowedByIdContenidoPadreAndIdUsuario/{idContenidoPadre}/{idUsuario}",
+                "full_path": "/sgdcontenido/findAllAllowedByIdContenidoPadreAndIdUsuario/{idContenidoPadre}/{idUsuario}"
+            },
+            {
+                "method_name": "addFolder",
+                "http_method": "POST",
+                "path": "/addFolder",
+                "full_path": "/sgdcontenido/addFolder"
+            },
+            {
+                "method_name": "rename",
+                "http_method": "PUT",
+                "path": "/rename",
+                "full_path": "/sgdcontenido/rename"
+            },
+            {
+                "method_name": "archive",
+                "http_method": "DELETE",
+                "path": "/archive/{idContenido}/{idUsuario}",
+                "full_path": "/sgdcontenido/archive/{idContenido}/{idUsuario}"
+            },
+            {
+                "method_name": "delete",
+                "http_method": "DELETE",
+                "path": "/delete/{idContenido}/{idUsuario}",
+                "full_path": "/sgdcontenido/delete/{idContenido}/{idUsuario}"
+            },
+            {
+                "method_name": "restore",
+                "http_method": "PUT",
+                "path": "/restore/{idContenido}/{idUsuario}",
+                "full_path": "/sgdcontenido/restore/{idContenido}/{idUsuario}"
+            },
+            {
+                "method_name": "restoreWithRename",
+                "http_method": "PUT",
+                "path": "/restoreWithRename",
+                "full_path": "/sgdcontenido/restoreWithRename"
+            },
+            {
+                "method_name": "restoreWithReplace",
+                "http_method": "PUT",
+                "path": "/restoreWithReplace/{idContenido}/{idUsuario}",
+                "full_path": "/sgdcontenido/restoreWithReplace/{idContenido}/{idUsuario}"
+            },
+            {
+                "method_name": "findAllArchivedByModulo",
+                "http_method": "GET",
+                "path": "/findAllArchivedByModulo/{idModulo}",
+                "full_path": "/sgdcontenido/findAllArchivedByModulo/{idModulo}"
+            },
+            {
+                "method_name": "archiveDir",
+                "http_method": "DELETE",
+                "path": "/archiveDir/{idContenido}/{idUsuario}",
+                "full_path": "/sgdcontenido/archiveDir/{idContenido}/{idUsuario}"
+            },
+            {
+                "method_name": "restoreDir",
+                "http_method": "PUT",
+                "path": "/restoreDir/{idContenido}/{idUsuario}",
+                "full_path": "/sgdcontenido/restoreDir/{idContenido}/{idUsuario}"
+            },
+            {
+                "method_name": "deleteDir",
+                "http_method": "DELETE",
+                "path": "/deleteDir/{idContenido}/{idUsuario}",
+                "full_path": "/sgdcontenido/deleteDir/{idContenido}/{idUsuario}"
+            },
+            {
+                "method_name": "findAllSharedByModulo",
+                "http_method": "GET",
+                "path": "/findAllSharedByModulo/{idModulo}/{idUsuario}",
+                "full_path": "/sgdcontenido/findAllSharedByModulo/{idModulo}/{idUsuario}"
+            },
+            {
+                "method_name": "updCtrlPublico",
+                "http_method": "PUT",
+                "path": "/updCtrlPublico/{idUsuario}",
+                "full_path": "/sgdcontenido/updCtrlPublico/{idUsuario}"
+            },
+            {
+                "method_name": "updCtrlProtegido",
+                "http_method": "PUT",
+                "path": "/updCtrlProtegido/{idUsuario}",
+                "full_path": "/sgdcontenido/updCtrlProtegido/{idUsuario}"
+            },
+            {
+                "method_name": "findAllContenidoExportExcel",
+                "http_method": "POST",
+                "path": "/findAllContenidoExportExcel",
+                "full_path": "/sgdcontenido/findAllContenidoExportExcel"
+            },
+            {
+                "method_name": "findAllBySearchFilter",
+                "http_method": "POST",
+                "path": "/searchFilter",
+                "full_path": "/sgdcontenido/searchFilter"
+            },
+            {
+                "method_name": "findAllDownload",
+                "http_method": "POST",
+                "path": "/findAllFilesDownload",
+                "full_path": "/sgdcontenido/findAllFilesDownload"
+            },
+            {
+                "method_name": "multipleFilesDownload",
+                "http_method": "POST",
+                "path": "/multipleFilesDownload",
+                "full_path": "/sgdcontenido/multipleFilesDownload"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdEmpresaController",
+        "base_path": "/sgdempresa",
+        "endpoints": [
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/sgdempresa"
+            },
+            {
+                "method_name": "update",
+                "http_method": "PUT",
+                "path": "",
+                "full_path": "/sgdempresa"
+            },
+            {
+                "method_name": "findPredeterminado",
+                "http_method": "GET",
+                "path": "/findPredeterminado",
+                "full_path": "/sgdempresa/findPredeterminado"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdLinkDescargaContenidoController",
+        "base_path": "/sgdlinkdescargacontenido",
+        "endpoints": [
+            {
+                "method_name": "findAllByIdLinkDescarga",
+                "http_method": "GET",
+                "path": "/findAllByIdLinkDescarga/{id}",
+                "full_path": "/sgdlinkdescargacontenido/findAllByIdLinkDescarga/{id}"
+            },
+            {
+                "method_name": "findAllByIdContenidoPadre",
+                "http_method": "GET",
+                "path": "/findAllByIdContenidoPadre/{id}",
+                "full_path": "/sgdlinkdescargacontenido/findAllByIdContenidoPadre/{id}"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdLinkDescargaController",
+        "base_path": "/sgdlinkdescarga",
+        "endpoints": [
+            {
+                "method_name": "findById",
+                "http_method": "GET",
+                "path": "/{id}",
+                "full_path": "/sgdlinkdescarga/{id}"
+            },
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/sgdlinkdescarga"
+            },
+            {
+                "method_name": "generateLink",
+                "http_method": "POST",
+                "path": "/generateLink",
+                "full_path": "/sgdlinkdescarga/generateLink"
+            },
+            {
+                "method_name": "expirationLink",
+                "http_method": "GET",
+                "path": "/linkValidation/{ruc}/{id}",
+                "full_path": "/sgdlinkdescarga/linkValidation/{ruc}/{id}"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdModuloController",
+        "base_path": "/sgdmodulo",
+        "endpoints": [
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/sgdmodulo"
+            },
+            {
+                "method_name": "update",
+                "http_method": "PUT",
+                "path": "",
+                "full_path": "/sgdmodulo"
+            },
+            {
+                "method_name": "findAllByIdProyecto",
+                "http_method": "GET",
+                "path": "/findAllByIdProyecto/{idProyecto}",
+                "full_path": "/sgdmodulo/findAllByIdProyecto/{idProyecto}"
+            },
+            {
+                "method_name": "findAllAllowedByIdProyectoAndIdUsuario",
+                "http_method": "GET",
+                "path": "/findAllAllowedByIdProyectoAndIdUsuario/{idProyecto}/{idUsuario}",
+                "full_path": "/sgdmodulo/findAllAllowedByIdProyectoAndIdUsuario/{idProyecto}/{idUsuario}"
+            },
+            {
+                "method_name": "findByCodigo",
+                "http_method": "GET",
+                "path": "/findByCodigo/{codigo}",
+                "full_path": "/sgdmodulo/findByCodigo/{codigo}"
+            },
+            {
+                "method_name": "findAllActives",
+                "http_method": "GET",
+                "path": "/findAllActives",
+                "full_path": "/sgdmodulo/findAllActives"
+            },
+            {
+                "method_name": "findByCodigoCustom",
+                "http_method": "GET",
+                "path": "/findByCodigoCustom/{codigo}",
+                "full_path": "/sgdmodulo/findByCodigoCustom/{codigo}"
+            },
+            {
+                "method_name": "createBackup",
+                "http_method": "GET",
+                "path": "/createBackup",
+                "full_path": "/sgdmodulo/createBackup"
+            },
+            {
+                "method_name": "backupStatus",
+                "http_method": "GET",
+                "path": "/backupStatus/{jobId}",
+                "full_path": "/sgdmodulo/backupStatus/{jobId}"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdProyectoController",
+        "base_path": "/sgdproyecto",
+        "endpoints": [
+            {
+                "method_name": "findAllAllowedByUsuario",
+                "http_method": "GET",
+                "path": "/findAllAllowedByUsuario/{idUsuario}",
+                "full_path": "/sgdproyecto/findAllAllowedByUsuario/{idUsuario}"
+            },
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/sgdproyecto"
+            },
+            {
+                "method_name": "update",
+                "http_method": "PUT",
+                "path": "",
+                "full_path": "/sgdproyecto"
+            },
+            {
+                "method_name": "findAll",
+                "http_method": "GET",
+                "path": "/findAll",
+                "full_path": "/sgdproyecto/findAll"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdTipoArchivoController",
+        "base_path": "/sgdtipoarchivo",
+        "endpoints": [
+            {
+                "method_name": "findAllActives",
+                "http_method": "GET",
+                "path": "/findAllActives",
+                "full_path": "/sgdtipoarchivo/findAllActives"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdTipoDocumentoController",
+        "base_path": "/sgdtipodocumento",
+        "endpoints": [
+            {
+                "method_name": "findById",
+                "http_method": "GET",
+                "path": "/{idTipoDocumento}",
+                "full_path": "/sgdtipodocumento/{idTipoDocumento}"
+            },
+            {
+                "method_name": "insert",
+                "http_method": "POST",
+                "path": "",
+                "full_path": "/sgdtipodocumento"
+            },
+            {
+                "method_name": "update",
+                "http_method": "PUT",
+                "path": "",
+                "full_path": "/sgdtipodocumento"
+            },
+            {
+                "method_name": "delete",
+                "http_method": "DELETE",
+                "path": "/{id}",
+                "full_path": "/sgdtipodocumento/{id}"
+            },
+            {
+                "method_name": "findAllActivesByCodigoModulo",
+                "http_method": "GET",
+                "path": "/findAllActivesByCodModulo/{codModulo}",
+                "full_path": "/sgdtipodocumento/findAllActivesByCodModulo/{codModulo}"
+            },
+            {
+                "method_name": "findAllActivesByIdModulo",
+                "http_method": "GET",
+                "path": "/findAllActivesByIdModulo/{idModulo}",
+                "full_path": "/sgdtipodocumento/findAllActivesByIdModulo/{idModulo}"
+            },
+            {
+                "method_name": "findAllByIdModulo",
+                "http_method": "GET",
+                "path": "/findAllByIdModulo/{idModulo}",
+                "full_path": "/sgdtipodocumento/findAllByIdModulo/{idModulo}"
+            },
+            {
+                "method_name": "findAllActives",
+                "http_method": "GET",
+                "path": "/findAllActives",
+                "full_path": "/sgdtipodocumento/findAllActives"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdTipoDocumentoIdentidadController",
+        "base_path": "/sgdtipodocumentoidentidad",
+        "endpoints": [
+            {
+                "method_name": "findAllActives",
+                "http_method": "GET",
+                "path": "/findAllActives",
+                "full_path": "/sgdtipodocumentoidentidad/findAllActives"
+            }
+        ]
+    },
+    {
+        "controller_class": "SgdUsuarioController",
+        "base_path": "/sgdusuario",
+        "endpoints": [
+            {
+                "method_name": "findById",
+                "http_method": "GET",
+                "path": "/{id}",
+                "full_path": "/sgdusuario/{id}"
+            },
+            {
+                "method_name": "insertOrUpdate",
+                "http_method": "POST",
+                "path": "/add",
+                "full_path": "/sgdusuario/add"
+            },
+            {
+                "method_name": "delete",
+                "http_method": "DELETE",
+                "path": "/{id}",
+                "full_path": "/sgdusuario/{id}"
+            },
+            {
+                "method_name": "findAll",
+                "http_method": "GET",
+                "path": "",
+                "full_path": "/sgdusuario"
+            },
+            {
+                "method_name": "findAllActives",
+                "http_method": "GET",
+                "path": "/findAllActives",
+                "full_path": "/sgdusuario/findAllActives"
+            },
+            {
+                "method_name": "findAccesosByUsuario",
+                "http_method": "GET",
+                "path": "/findAccesosByIdUsuario/{idUsuario}",
+                "full_path": "/sgdusuario/findAccesosByIdUsuario/{idUsuario}"
+            },
+            {
+                "method_name": "copyAccesosFromIdUsuarioToIdUsuario",
+                "http_method": "POST",
+                "path": "/copyAccesosToIdUsuario/{idUsuario}",
+                "full_path": "/sgdusuario/copyAccesosToIdUsuario/{idUsuario}"
+            }
+        ]
+    }
+]
