@@ -39,7 +39,6 @@ export const ChartOrphanEndpoints: React.FC<ChartOrphanEndpointsProps> = ({ resu
 
   const orphanData: OrphanSystemItem[] = Object.entries(SYSTEMS_DB).map(([sysName, modules]) => {
     const allEndpoints = new Set<string>();
-    const normSys = normalizeSystem(sysName);
     
     modules.forEach(mod => {
       mod.controllers.forEach(ctrl => {

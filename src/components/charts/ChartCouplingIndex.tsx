@@ -93,9 +93,6 @@ export const ChartCouplingIndex: React.FC<ChartCouplingIndexProps> = ({ results 
           ) : (
             couplingData.map((item, idx) => {
               const risk = getRiskBadge(item.totalTeams);
-              const frontPct = Math.round((item.frontTeams / maxTotalTeams) * 100);
-              const backPct = Math.round((item.backTeams / maxTotalTeams) * 100);
-              const bothPct = Math.round((item.bothTeams / maxTotalTeams) * 100);
               const totalPct = Math.max(5, Math.round((item.totalTeams / maxTotalTeams) * 100));
 
               return (
