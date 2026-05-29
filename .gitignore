@@ -6,3 +6,5 @@ dist-ssr
 .idea
 .DS_Store
 *.log
+src/data/encuestados
+src/data/bruta
