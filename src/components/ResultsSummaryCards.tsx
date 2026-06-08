@@ -1,7 +1,7 @@
 import React from 'react';
 import { Users, FolderGit, Database, Layers } from 'lucide-react';
 import { SurveyResult } from '../types/results';
-import { SYSTEMS_DB } from '../data/systemsDb';
+import { VALID_ENDPOINTS } from './ResultsViewer';
 
 interface ResultsSummaryCardsProps {
   results: SurveyResult[];
@@ -21,18 +21,18 @@ const normalizeEndpointFull = (ep: string): string => {
   return cleaned;
 };
 
-const VALID_ENDPOINTS = new Set<string>();
+// const VALID_ENDPOINTS = new Set<string>();
 
-for (const [sysName, modules] of Object.entries(SYSTEMS_DB)) {
-  const normSys = normalizeSystem(sysName);
-  for (const mod of modules) {
-    for (const ctrl of mod.controllers) {
-      for (const ep of ctrl.endpoints) {
-        VALID_ENDPOINTS.add(`${normSys}|${normalizeEndpointFull(ep)}`);
-      }
-    }
-  }
-}
+// for (const [sysName, modules] of Object.entries(SYSTEMS_DB)) {
+//   const normSys = normalizeSystem(sysName);
+//   for (const mod of modules) {
+//     for (const ctrl of mod.controllers) {
+//       for (const ep of ctrl.endpoints) {
+//         VALID_ENDPOINTS.add(`${normSys}|${normalizeEndpointFull(ep)}`);
+//       }
+//     }
+//   }
+// }
 
 export const ResultsSummaryCards: React.FC<ResultsSummaryCardsProps> = ({ results }) => {
   const totalDevelopers = results.length;

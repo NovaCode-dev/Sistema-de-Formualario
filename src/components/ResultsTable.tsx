@@ -9,6 +9,7 @@ interface ResultsTableProps {
   selectedProjects: string[];
   selectedSystems: string[];
   selectedUsages: string[];
+  catalogData?: any[];
 }
 
 interface TableRowData {
@@ -18,6 +19,7 @@ interface TableRowData {
   method: string;
   path: string;
   usages: Array<{ developer: string; team: string; usage: string }>;
+  isDynamic?: boolean;
 }
 
 const normalizeSystem = (sys: string): string => {
@@ -34,37 +36,98 @@ const normalizeEndpointFull = (ep: string): string => {
   return cleaned;
 };
 
-const buildConsolidatedCatalog = (results: SurveyResult[]): TableRowData[] => {
-  const catalog: TableRowData[] = [];
+const extractMethod = (ep: string): string => {
+  const match = ep.trim().match(/^(get|post|put|delete|patch|options|head)/i);
+  return match ? match[0].toLowerCase() : '';
+};
 
-  for (const [sysName, modules] of Object.entries(SYSTEMS_DB)) {
-    for (const mod of modules) {
-      for (const ctrl of mod.controllers) {
-        for (const ep of ctrl.endpoints) {
-          const [method, ...rest] = ep.split(' ');
+const buildConsolidatedCatalog = (results: SurveyResult[], catalogData?: any[]): TableRowData[] => {
+  const catalog: TableRowData[] = [];
+  const catalogMap = new Map<string, TableRowData>();
+
+  if (catalogData && catalogData.length > 0) {
+    catalogData.forEach(row => {
+      const sysName = row.system_name || '';
+      const controllers = row.controllers || [];
+      
+      controllers.forEach((ctrl: any) => {
+        const ctrlName = ctrl.name || '';
+        const endpoints = ctrl.endpoints || [];
+        
+        endpoints.forEach((ep: string) => {
+          const [method, ...rest] = ep.trim().split(' ');
           const path = rest.join(' ');
           
-          catalog.push({
+          const rowData: TableRowData = {
             system: sysName,
-            controller: ctrl.name,
+            controller: ctrlName,
             endpoint: ep,
             method: method || 'GET',
             path: path || ep,
             usages: []
-          });
+          };
+          catalog.push(rowData);
+          
+          const key = `${normalizeSystem(sysName)}|${extractMethod(ep)}|${normalizeEndpointFull(ep)}`;
+          catalogMap.set(key, rowData);
+        });
+      });
+    });
+  } else {
+    for (const [sysName, modules] of Object.entries(SYSTEMS_DB)) {
+      for (const mod of modules) {
+        for (const ctrl of mod.controllers) {
+          for (const ep of ctrl.endpoints) {
+            const [method, ...rest] = ep.split(' ');
+            const path = rest.join(' ');
+            
+            const rowData: TableRowData = {
+              system: sysName,
+              controller: ctrl.name,
+              endpoint: ep,
+              method: method || 'GET',
+              path: path || ep,
+              usages: []
+            };
+            catalog.push(rowData);
+
+            const key = `${normalizeSystem(sysName)}|${extractMethod(ep)}|${normalizeEndpointFull(ep)}`;
+            catalogMap.set(key, rowData);
+          }
         }
       }
     }
   }
 
+  // CONFIGURACIÓN TEMPORAL: Permitir mapear endpoints que no están en el catálogo oficial
+  const ALLOW_DYNAMIC_ENDPOINTS = true;
+
   results.forEach(r => {
     r.endpointMappings.forEach(mapping => {
       if (mapping.usage && mapping.usage !== 'NONE') {
-        const matchingRow = catalog.find(row => 
-          normalizeSystem(row.system) === normalizeSystem(mapping.system) && 
-          normalizeEndpointFull(row.endpoint) === normalizeEndpointFull(mapping.endpoint)
-        );
+        const key = `${normalizeSystem(mapping.system)}|${extractMethod(mapping.endpoint)}|${normalizeEndpointFull(mapping.endpoint)}`;
+        let matchingRow = catalogMap.get(key);
         
+        // --- INICIO CREACIÓN DINÁMICA TEMPORAL (Removible) ---
+        if (!matchingRow && ALLOW_DYNAMIC_ENDPOINTS) {
+          const [method, ...rest] = mapping.endpoint.trim().split(' ');
+          const path = rest.join(' ');
+          
+          matchingRow = {
+            system: mapping.system,
+            controller: mapping.controller || 'Controlador Nuevo (ClickUp)',
+            endpoint: mapping.endpoint,
+            method: method || 'GET',
+            path: path || mapping.endpoint,
+            usages: [],
+            isDynamic: true
+          };
+          
+          catalog.push(matchingRow);
+          catalogMap.set(key, matchingRow);
+        }
+        // --- FIN CREACIÓN DINÁMICA TEMPORAL ---
+
         if (matchingRow) {
           const exists = matchingRow.usages.some(u => 
             u.developer.trim().toLowerCase() === r.developer.name.trim().toLowerCase() &&
@@ -90,19 +153,31 @@ export const ResultsTable: React.FC<ResultsTableProps> = ({
   searchTerm,
   selectedProjects,
   selectedSystems,
-  selectedUsages
+  selectedUsages,
+  catalogData
 }) => {
-  const [showOnlyConsumed, setShowOnlyConsumed] = useState(true);
+  const [showOnlyConsumed, setShowOnlyConsumed] = useState(results.length > 0);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(15);
+
+  useEffect(() => {
+    setShowOnlyConsumed(results.length > 0);
+  }, [results.length]);
 
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm, selectedProjects, selectedSystems, selectedUsages, showOnlyConsumed]);
 
-  const fullCatalog = useMemo(() => buildConsolidatedCatalog(results), [results]);
+  const fullCatalog = useMemo(() => buildConsolidatedCatalog(results, catalogData), [results, catalogData]);
+
 
   const filteredRows = fullCatalog.filter(row => {
+    // Si no estamos en modo "Solo Consumidos", no mostrar las agregadas dinámicamente
+    // para no alterar el catálogo oficial de base_endpoints.
+    if (!showOnlyConsumed && row.isDynamic) {
+      return false;
+    }
+
     if (showOnlyConsumed && row.usages.length === 0) {
       return false;
     }
@@ -232,7 +307,7 @@ export const ResultsTable: React.FC<ResultsTableProps> = ({
                 : 'bg-blue-600 text-white shadow-md'
             }`}
           >
-            Catálogo Completo ({fullCatalog.length})
+            Catálogo Completo ({fullCatalog.filter(row => !row.isDynamic).length})
           </button>
         </div>
 
