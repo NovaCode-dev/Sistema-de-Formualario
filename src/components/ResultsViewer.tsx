@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ResultsUploader } from './ResultsUploader';
 import { ResultsSummaryCards } from './ResultsSummaryCards';
 import { ResultsCharts } from './ResultsCharts';
 import { ResultsFilterBar } from './ResultsFilterBar';
 import { ResultsTable } from './ResultsTable';
 import { SurveyResult } from '../types/results';
-import { BarChart3, UploadCloud, Info, Database, Eye, ShieldAlert, CheckCircle2 } from 'lucide-react';
+import { BarChart3, UploadCloud, Info, Database, Eye, ShieldAlert, CheckCircle2, AlertTriangle, Loader2 } from 'lucide-react';
 import { SYSTEMS_DB } from '../data/systemsDb';
+import { fetchFromSupabase, SUPABASE_CATALOG_TABLE, SUPABASE_SURVEYS_TABLE } from '../config/supabase';
 
 interface UploadedFileDetail {
   name: string;
@@ -32,18 +33,43 @@ const normalizeEndpointFull = (ep: string): string => {
   return cleaned;
 };
 
-const VALID_ENDPOINTS = new Set<string>();
+// Set exportable y dinámico de endpoints oficiales
+export const VALID_ENDPOINTS = new Set<string>();
 
-for (const [sysName, modules] of Object.entries(SYSTEMS_DB)) {
-  const normSys = normalizeSystem(sysName);
-  for (const mod of modules) {
-    for (const ctrl of mod.controllers) {
-      for (const ep of ctrl.endpoints) {
-        VALID_ENDPOINTS.add(`${normSys}|${normalizeEndpointFull(ep)}`);
+// Poblar desde el catálogo local SYSTEMS_DB (.ts)
+export function populateValidEndpointsLocal() {
+  VALID_ENDPOINTS.clear();
+  for (const [sysName, modules] of Object.entries(SYSTEMS_DB)) {
+    const normSys = normalizeSystem(sysName);
+    for (const mod of modules) {
+      if (!mod.controllers) continue;
+      for (const ctrl of mod.controllers) {
+        if (!ctrl.endpoints) continue;
+        for (const ep of ctrl.endpoints) {
+          VALID_ENDPOINTS.add(`${normSys}|${normalizeEndpointFull(ep)}`);
+        }
       }
     }
   }
 }
+
+// Poblar dinámicamente desde la base de datos de Supabase (Tabla A)
+export function populateValidEndpointsFromSupabase(catalogData: any[]) {
+  VALID_ENDPOINTS.clear();
+  catalogData.forEach(row => {
+    const normSys = normalizeSystem(row.system_name || '');
+    const controllers = row.controllers || [];
+    controllers.forEach((ctrl: any) => {
+      const endpoints = ctrl.endpoints || [];
+      endpoints.forEach((ep: string) => {
+        VALID_ENDPOINTS.add(`${normSys}|${normalizeEndpointFull(ep)}`);
+      });
+    });
+  });
+}
+
+// Inicializar por defecto con los datos locales
+// populateValidEndpointsLocal();
 
 export const ResultsViewer: React.FC = () => {
   const [results, setResults] = useState<SurveyResult[]>([]);
@@ -55,6 +81,89 @@ export const ResultsViewer: React.FC = () => {
   const [selectedProjects, setSelectedProjects] = useState<string[]>([]);
   const [selectedSystems, setSelectedSystems] = useState<string[]>([]);
   const [selectedUsages, setSelectedUsages] = useState<string[]>([]);
+
+  // CONTROL DE ESTADO DE CARGA Y API DE SUPABASE
+  const [isLoading, setIsLoading] = useState(false);
+  const [supabaseError, setSupabaseError] = useState<string | null>(null);
+  const [catalogData, setCatalogData] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchCatalogAndSurveys = async () => {
+      try {
+        setIsLoading(true);
+        setSupabaseError(null);
+
+        // 1. CARGA DE LA BASE OFICIAL (Tabla A en Supabase)
+        // Consultamos la tabla del catálogo consolidado que creamos
+        const data = await fetchFromSupabase(SUPABASE_CATALOG_TABLE);
+        if (data && data.length > 0) {
+          populateValidEndpointsFromSupabase(data);
+          setCatalogData(data);
+          console.log(`[Supabase] Cargados ${data.length} módulos del catálogo correctamente.`);
+        }
+
+        // 2. CARGA DE LAS ENCUESTAS RECOPILADAS (Tabla B en Supabase)
+        const surveyData = await fetchFromSupabase(SUPABASE_SURVEYS_TABLE, 'select=*', true);
+        if (surveyData && surveyData.length > 0) {
+          // La data viene en formato plano (cada registro es un endpoint individual asignado a un dev).
+          // La agrupamos por desarrollador/equipo para que el frontend lo reconozca como SurveyResult[].
+          const groupedMap = new Map<string, SurveyResult>();
+
+          surveyData.forEach((row: any) => {
+            const dev = row.developer || {};
+            const devName = typeof dev.name === 'string' && dev.name.trim() ? dev.name.trim() : 'Desarrollador Desconocido';
+            const devTeam = typeof dev.team === 'string' && dev.team.trim() ? dev.team.trim() : 'Sin Equipo';
+            const devRole = typeof dev.role === 'string' && dev.role.trim() ? dev.role.trim() : 'automated parser';
+            
+            const groupKey = `${devName}||${devTeam}`;
+            
+            const system = row.system || '';
+            const controller = row.controller || '';
+            const endpoint = row.endpoint || '';
+            const usage = row.usage || 'NONE';
+            
+            const mappingEntry = {
+              system,
+              controller,
+              endpoint,
+              usage: (['FRONT', 'BACK', 'BOTH', 'NONE'].includes(usage) ? usage : 'NONE') as 'FRONT' | 'BACK' | 'BOTH' | 'NONE'
+            };
+
+            if (!groupedMap.has(groupKey)) {
+              groupedMap.set(groupKey, {
+                developer: {
+                  name: devName,
+                  team: devTeam,
+                  role: devRole
+                },
+                timestamp: row.created_at || new Date().toISOString(),
+                systemsConsumed: [system].filter(Boolean),
+                endpointMappings: [mappingEntry]
+              });
+            } else {
+              const group = groupedMap.get(groupKey)!;
+              group.endpointMappings.push(mappingEntry);
+              if (system && !group.systemsConsumed.includes(system)) {
+                group.systemsConsumed.push(system);
+              }
+            }
+          });
+
+          const normalizedSurveys = Array.from(groupedMap.values());
+          setResults(normalizedSurveys);
+        }
+        
+
+      } catch (err: any) {
+        console.error('Error al consultar Supabase:', err);
+        setSupabaseError(err.message || 'Error al conectar con Supabase');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCatalogAndSurveys();
+  }, []);
 
   const handleAddResults = (newResults: SurveyResult[], fileName: string) => {
     setResults(prev => [...prev, ...newResults]);
@@ -106,9 +215,10 @@ export const ResultsViewer: React.FC = () => {
 
   const availableProjects = Array.from(new Set(results.map(r => r.developer.team.trim()).filter(Boolean)));
   
-  const availableSystems = Array.from(new Set(
-    results.flatMap(r => r.endpointMappings.map(m => m.system).filter(Boolean))
-  ));
+  const availableSystems = results.length > 0
+    ? Array.from(new Set(results.flatMap(r => r.endpointMappings.map(m => m.system).filter(Boolean))))
+    : Object.keys(SYSTEMS_DB);
+
 
   const handleProjectToggle = (project: string) => {
     setSelectedProjects(prev =>
@@ -158,6 +268,32 @@ export const ResultsViewer: React.FC = () => {
 
   return (
     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 w-full">
+      {supabaseError && (
+        <div className="bg-amber-50 border border-amber-200 text-amber-800 px-4 py-3 rounded-2xl flex items-center space-x-3 text-xs md:text-sm animate-in fade-in duration-300">
+          <AlertTriangle className="w-5 h-5 shrink-0 text-amber-600" />
+          <div className="flex-1">
+            <span className="font-bold">Aviso de Supabase:</span> {supabaseError}. Usando la base de datos estática local como respaldo.
+          </div>
+        </div>
+      )}
+
+      {isLoading && (
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-900/60 backdrop-blur-md transition-all duration-300 animate-in fade-in">
+          <div className="bg-white/95 p-8 rounded-3xl shadow-2xl border border-white/20 flex flex-col items-center max-w-sm mx-auto text-center space-y-4">
+            <div className="relative flex items-center justify-center">
+              <div className="w-16 h-16 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin"></div>
+              <Loader2 className="w-8 h-8 text-blue-600 animate-spin absolute" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-slate-800">Cargando Datos</h3>
+              <p className="text-sm text-slate-500 mt-1">
+                Sincronizando encuestas y catálogo con Supabase. Por favor, espere...
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h2 className="text-2xl font-bold text-gray-800 flex items-center">
@@ -181,7 +317,7 @@ export const ResultsViewer: React.FC = () => {
           }`}
         >
           <UploadCloud className="w-4 h-4" />
-          <span>Cargar Datos</span>
+          <span>Resultados de la Encuesta</span>
         </button>
 
         <button
@@ -213,8 +349,8 @@ export const ResultsViewer: React.FC = () => {
 
       <div className="w-full pt-2">
         {subTab === 'upload' && (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
-            <div className="lg:col-span-1 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm space-y-4 h-fit">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+            <div className="hidden lg:col-span-1 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm space-y-4 h-fit">
               <h3 className="font-bold text-gray-800 flex items-center text-sm md:text-base">
                 <UploadCloud className="w-5 h-5 mr-2 text-blue-600" />
                 Cargar Respuestas JSON
@@ -246,7 +382,7 @@ export const ResultsViewer: React.FC = () => {
                 <div className="space-y-6 w-full">
                   <ResultsSummaryCards results={results} />
                   
-                  <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm w-full">
+                  <div className="hidden bg-white border border-gray-200 rounded-2xl p-6 shadow-sm w-full">
                     <h3 className="font-bold text-gray-800 mb-4 flex items-center text-sm md:text-base">
                       <Info className="w-5 h-5 mr-2 text-blue-600" />
                       Resumen de Archivos Cargados
@@ -367,37 +503,30 @@ export const ResultsViewer: React.FC = () => {
           </div>
         )}
 
-        {subTab === 'list' && (
-          <div className="space-y-6 w-full">
-            {results.length === 0 ? (
-              showEmptyState()
-            ) : (
-              <>
-                <ResultsFilterBar 
-                  searchTerm={searchTerm}
-                  onSearchChange={setSearchTerm}
-                  selectedProjects={selectedProjects}
-                  onProjectChange={handleProjectToggle}
-                  availableProjects={availableProjects}
-                  selectedSystems={selectedSystems}
-                  onSystemChange={handleSystemToggle}
-                  availableSystems={availableSystems}
-                  selectedUsages={selectedUsages}
-                  onUsageChange={handleUsageToggle}
-                  onClearFilters={handleClearFilters}
-                />
-                
-                <ResultsTable 
-                  results={results}
-                  searchTerm={searchTerm}
-                  selectedProjects={selectedProjects}
-                  selectedSystems={selectedSystems}
-                  selectedUsages={selectedUsages}
-                />
-              </>
-            )}
-          </div>
-        )}
+        <div className={subTab === 'list' ? 'space-y-6 w-full animate-in fade-in duration-200' : 'hidden'}>
+          <ResultsFilterBar 
+            searchTerm={searchTerm}
+            onSearchChange={setSearchTerm}
+            selectedProjects={selectedProjects}
+            onProjectChange={handleProjectToggle}
+            availableProjects={availableProjects}
+            selectedSystems={selectedSystems}
+            onSystemChange={handleSystemToggle}
+            availableSystems={availableSystems}
+            selectedUsages={selectedUsages}
+            onUsageChange={handleUsageToggle}
+            onClearFilters={handleClearFilters}
+          />
+          
+          <ResultsTable 
+            results={results}
+            searchTerm={searchTerm}
+            selectedProjects={selectedProjects}
+            selectedSystems={selectedSystems}
+            selectedUsages={selectedUsages}
+            catalogData={catalogData}
+          />
+        </div>
       </div>
     </div>
   );
